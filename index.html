@@ -58,9 +58,9 @@
   <header>
     <div class="branding">
       <!-- Upload your logo as 'logo.jpeg.jpg' in the repo root -->
-      <img src="logo.jpeg" alt="Pachameen logo" class="logo" onerror="this.style.display='none'">
+      <img src="logo.jpeg.jpg" alt="Pachameen logo" class="logo" onerror="this.style.display='none'">
       <div>
-        <h1>🐟 Pachameen — Fresh Fish from Trivandrum</h1>
+        <h1>🐟 Pachameen — Fresh Fish Delivery Service in Trivandrum</h1>
         <p class="lead">Fresh fish handpicked and delivered to your home</p>
         <div class="cta-row">
           <a class="button" href="https://wa.me/918921186855?text=Hi%20Pachameen!%20Please%20add%20me%20to%20your%20fresh%20fish%20broadcast%20list." target="_blank" rel="noopener">📱 Join WhatsApp Broadcast</a>
@@ -158,8 +158,121 @@
 
   <footer>
     <div class="container">
-      <p>© Pachameen — Fresh Fish from Trivandrum</p>
+      <p>© Pachameen — From Sea to your Home</p>
       <p style="margin-top:8px"><a href="https://wa.me/918921186855" style="color:white;text-decoration:underline">Contact us on WhatsApp</a></p>
+      <!-- Follow Us Section -->
+<div class="social-follow">
+  <h3>Follow Us</h3>
+  <p>Stay updated with our latest catches, offers, and news!</p>
+
+  <div class="social-buttons">
+    <!-- Instagram -->
+    <a href="https://instagram.com/pachameen" target="_blank" rel="noopener noreferrer" class="social-btn white insta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon insta-icon">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-2.6a1.12 1.12 0 1 0 1.12 1.12A1.12 1.12 0 0 0 18.4 5.6z"/>
+      </svg>
+      <span>Follow on Instagram</span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://facebook.com/pachameen" target="_blank" rel="noopener noreferrer" class="social-btn white fb">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon fb-icon">
+        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6V12H18l-.5 3h-3v7A10 10 0 0 0 22 12z"/>
+      </svg>
+      <span>Follow on Facebook</span>
+    </a>
+  </div>
+</div>
+
+<style>
+.social-follow {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #004aad; /* Your blue background */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  color: #fff;
+}
+
+.social-follow h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.social-follow p {
+  color: #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-btn.white {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.social-btn.white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Instagram color accent */
+.insta-icon {
+  fill: url(#igGradient);
+}
+
+/* Define Instagram gradient icon color */
+.insta-icon path {
+  fill: url(#igGradient);
+}
+
+.fb-icon {
+  fill: #1877f2;
+}
+
+.insta span {
+  color: #dd2a7b;
+}
+
+.fb span {
+  color: #1877f2;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .social-buttons {
+    flex-direction: column;
+  }
+}
+
+/* SVG gradient definition */
+svg defs {
+  pointer-events: none;
+}
+</style>
+<svg width="0" height="0">
+  <defs>
+    <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f58529"/>
+      <stop offset="50%" stop-color="#dd2a7b"/>
+      <stop offset="100%" stop-color="#8134af"/>
+    </linearGradient>
+  </defs>
+</svg>
     </div>
   </footer>
 
