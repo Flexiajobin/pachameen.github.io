@@ -1,81 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pachameen — From Sea to your Home</title>
-  <meta name="description" content="Pachameen - Fresh fish delivery service in Trivandrum. Join our WhatsApp broadcast for daily catch and prices." />
-  <style>
-    :root{
-      --navy: #0077b6;
-      --sky: #00b4d8;
-      --bg: #e8f6ff;
-      --accent:#025f8f;
-      --green:#25D366;
-      --card:#ffffff;
-      --text:#073642;
-      --muted:#536878;
-      --maxWidth:1100px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-    header{background:linear-gradient(90deg,var(--navy),var(--sky));color:white;padding:28px 16px;text-align:center}
-    .container{max-width:var(--maxWidth);margin:24px auto;padding:0 16px}
-    .branding{display:flex;align-items:center;gap:18px;justify-content:center}
-    .logo{width:96px;height:96px;object-fit:cover;border-radius:12px;border:3px solid rgba(255,255,255,0.15);background:white}
-    h1{margin:0;font-size:26px}
-    p.lead{margin:6px 0 0;font-size:15px;opacity:0.95}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:16px}
-    a.button{display:inline-block;background:var(--green);color:white;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 6px 14px rgba(37,211,102,0.18)}
-    a.ghost{background:transparent;border:2px solid rgba(255,255,255,0.25);color:white;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
-    section{padding:28px 0}
-    h2{color:var(--navy);margin:0 0 14px;font-size:20px}
-    /* Story box */
-    #story-box{background:#e0f7fa;border-left:6px solid var(--navy);padding:18px;border-radius:10px;max-height:420px;overflow:auto;font-size:15px;line-height:1.62;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    #story-box h2{color:var(--accent)}
-    /* Fish grid */
-    .fish-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
-    .fish-item{background:var(--card);padding:12px;border-radius:10px;text-align:center;box-shadow:0 6px 18px rgba(2,95,143,0.06);font-weight:600}
-    /* Reviews */
-    .review{background:white;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:12px}
-    .small{font-size:13px;color:var(--muted)}
-    /* Youtube embed */
-    .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-    footer{background:var(--navy);color:white;padding:18px 16px;text-align:center;margin-top:26px}
-    .contact-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:10px}
-    /* Responsive tweaks */
-    @media (min-width:800px){
-      header{padding:36px 16px}
-      h1{font-size:32px}
-      .branding{justify-content:flex-start}
-      .container{padding:0 24px}
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pachameen — From Sea to Your Home</title>
+<meta name="description" content="Pachameen - Fresh fish delivery service in Trivandrum. Freshly caught fish delivered from the sea to your home daily. Join our WhatsApp broadcast for today's catch and prices." />
+
+<style>
+:root {
+--navy: #005f99;
+--sky: #00b4d8;
+--bg: #f5fbff;
+--accent: #014f6b;
+--green: #25D366;
+--card: #ffffff;
+--text: #053b50;
+--muted: #587d8c;
+--maxWidth: 1100px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+background: linear-gradient(135deg, var(--navy), var(--sky));
+color: white;
+text-align: center;
+padding: 50px 16px;
+}
+
+.branding {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 18px;
+}
+
+.logo {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 12px;
+border: 3px solid rgba(255,255,255,0.2);
+background: white;
+}
+
+h1 {
+font-size: 28px;
+font-weight: 700;
+}
+
+p.lead {
+font-size: 16px;
+opacity: 0.95;
+margin-top: 6px;
+}
+
+.cta-row {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+justify-content: center;
+margin-top: 18px;
+}
+
+a.button {
+display: inline-block;
+background: var(--green);
+color: white;
+padding: 12px 20px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: 600;
+box-shadow: 0 5px 12px rgba(37,211,102,0.25);
+transition: all 0.25s ease;
+}
+
+a.button:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 18px rgba(37,211,102,0.35);
+}
+
+a.ghost {
+background: rgba(255,255,255,0.15);
+border: 2px solid rgba(255,255,255,0.3);
+color: white;
+padding: 10px 18px;
+border-radius: 8px;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+a.ghost:hover {
+background: rgba(255,255,255,0.25);
+}
+
+.container {
+max-width: var(--maxWidth);
+margin: 0 auto;
+padding: 40px 20px;
+}
+
+section {
+margin-bottom: 50px;
+}
+
+h2 {
+font-size: 22px;
+color: var(--navy);
+margin-bottom: 14px;
+font-weight: 700;
+}
+
+/* STORY BOX */
+#story-box {
+background: #e0f7fa;
+border-left: 5px solid var(--navy);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+font-size: 15px;
+}
+
+/* FISH GRID */
+.fish-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap: 14px;
+}
+
+.fish-item {
+background: var(--card);
+padding: 14px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 4px 14px rgba(2,95,143,0.08);
+font-weight: 600;
+}
+
+.fish-item:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(2,95,143,0.12);
+transition: all 0.2s ease;
+}
+
+.small { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+/* YOUTUBE */
+.video-wrap {
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.video-wrap iframe {
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+border: 0;
+}
+
+/* FOOTER & SOCIALS */
+footer {
+background: linear-gradient(135deg, var(--navy), #003f7f);
+color: white;
+text-align: center;
+padding: 50px 16px;
+}
+
+footer p {
+margin: 10px 0;
+}
+
+.social-follow h3 {
+font-size: 22px;
+margin-bottom: 8px;
+}
+
+.social-follow p {
+color: #d8e7f3;
+margin-bottom: 20px;
+}
+
+.social-buttons {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 16px;
+}
+
+.social-btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background: #fff;
+color: #333;
+text-decoration: none;
+padding: 10px 18px;
+border-radius: 8px;
+font-weight: 600;
+transition: all 0.3s ease;
+box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.social-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.insta:hover span { color: #dd2a7b; }
+.fb:hover span { color: #1877f2; }
+
+.icon {
+width: 22px;
+height: 22px;
+}
+
+@media (max-width: 768px) {
+h1 { font-size: 24px; }
+.container { padding: 24px 16px; }
+.social-buttons { flex-direction: column; }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="branding">
-      <!-- Upload your logo as 'logo.jpeg.jpg' in the repo root -->
-      <img src="logo.jpeg.jpg" alt="Pachameen logo" class="logo" onerror="this.style.display='none'">
-      <div>
-        <h1>🐟 Pachameen — Fresh Fish Delivery Service in Trivandrum</h1>
-        <p class="lead">Fresh fish handpicked and delivered to your home</p>
-        <div class="cta-row">
-          <a class="button" href="https://wa.me/918921186855?text=Hi%20Pachameen!%20Please%20add%20me%20to%20your%20fresh%20fish%20broadcast%20list." target="_blank" rel="noopener">📱 Join WhatsApp Broadcast</a>
-          <a class="ghost" href="#fish">See Today's Fish</a>
-        </div>
-      </div>
-    </div>
-  </header>
+<header>
+<div class="branding">
+<img src="logo.jpeg.jpg" alt="Pachameen logo" class="logo" onerror="this.style.display='none'">
+<div>
+<h1>🐟 Pachameen — Fresh Fish Delivery Service in Trivandrum</h1>
+<p class="lead">Fresh fish handpicked and delivered straight to your home.</p>
+<div class="cta-row">
+<a class="button" href="https://wa.me/918921186855" target="_blank">📱 Join WhatsApp Broadcast</a>
+<a class="ghost" href="#fish">See Today's Catch</a>
+</div>
+</div>
+</div>
+</header>
 
-  <main class="container">
-
-    <section id="story">
-      <h2>🐟 Our Story — From the Sea to Your Home</h2>
-      <div id="story-box" aria-labelledby="story">
-        <p>My name is <strong>Jobin Ouseph</strong>, the proud son of a fisherman, born and brought up in a small coastal village in Trivandrum, Kerala. Growing up by the sea, I watched my father set out every morning in his small boat, braving the waves to bring home the freshest catch. His hard work, honesty, and love for the ocean shaped who I am today.</p>
+<main class="container">
+<section id="story">
+<h2>🐟 Our Story — From the Sea to Your Home</h2>
+<div id="story-box">
+          <p>My name is <strong>Jobin Ouseph</strong>, the proud son of a fisherman, born and brought up in a small coastal village in Trivandrum, Kerala. Growing up by the sea, I watched my father set out every morning in his small boat, braving the waves to bring home the freshest catch. His hard work, honesty, and love for the ocean shaped who I am today.</p>
 
         <p>During my MBA college days, I worked part-time with Uber Eats to support myself after classes. It wasn’t easy, but it taught me the value of hard work and connecting with people. When the pandemic struck in 2020, everything came to a halt. Jobs were scarce, and like many others, I struggled to find a way forward. I took up small catering jobs to keep things going for my family.</p>
 
@@ -91,190 +271,55 @@
         <p><strong>“Hope you can do wonders.”</strong></p>
 
         <p>That hope drives me every day. And now, as I prepare to bring back my dream, I invite you to be part of this journey — from the sea to your home.</p>
-      </div>
-    </section>
+</div>
+</section>
 
-    <section id="fish">
-      <h2>🐠 Types of Fish Available</h2>
-      <div class="fish-grid" role="list">
-        <div class="fish-item" role="listitem">Seer Fish (Neymeen)</div>
-        <div class="fish-item" role="listitem">Pomfret (Avoli)</div>
-        <div class="fish-item" role="listitem">Tuna (Choora)</div>
-        <div class="fish-item" role="listitem">Sardine (Mathi)</div>
-        <div class="fish-item" role="listitem">Anchovy (Netholi)</div>
-        <div class="fish-item" role="listitem">Crab & Prawns</div>
-        <div class="fish-item" role="listitem">Indian Mackerel (Ayala)</div>
-        <div class="fish-item" role="listitem">Pearl Spot (Karimeen)</div>
-        <div class="fish-item" role="listitem">Squid (kanava)</div>
-        <div class="fish-item" role="listitem">Barracuda (cheelav)</div>
-        <div class="fish-item" role="listitem">Red Snapper (Chempalli)</div>
-        <div class="fish-item" role="listitem">Clams (Kakka)</div>
-        <div class="fish-item" role="listitem">Ribbon Fish (Vaala)</div>
-        <div class="fish-item" role="listitem">Stingray (Thirandi)</div>
-        <div class="fish-item" role="listitem">Trevally (Vatta Paraa)</div>
-        <div class="fish-item" role="listitem">Cobia (Motha)</div>
-        <div class="fish-item" role="listitem">Mahi Mahi (Pulli Motha)</div>
-        <div class="fish-item" role="listitem">Yellow Fin Tuna (Kera Choora)</div>
-      </div>
-      <p class="small" style="margin-top:10px">(The availabilty of fresh fish depends on the weather and season, as our catch comes directly from local fishermen each day. Please message us on Whatsapp- We'll share the latest catch right away!.)</p>
-    </section>
+<section id="fish">
+<h2>🐠 Types of Fish Available</h2>
+<div class="fish-grid">
+<div class="fish-item">Seer Fish (Neymeen)</div>
+<div class="fish-item">Pomfret (Avoli)</div>
+<div class="fish-item">Tuna (Choora)</div>
+<div class="fish-item">Crab & Prawns</div>
+<div class="fish-item">Pearl Spot (Karimeen)</div>
+<div class="fish-item">Mackerel (Ayala)</div>
+</div>
+<p class="small">(Availability depends on weather and season — contact us on WhatsApp for today’s list and prices.)</p>
+</section>
 
-    <section id="reviews">
-      <h2>💬 Customer Reviews (Google)</h2>
-      <div class="review">
-        <strong>Arun Viswanathan, Trivandrum</strong>
-        <p class="small">“Fresh fish and good service!”</p>
-      </div>
-      <div class="review">
-        <strong>Anitha Varghese, Peroorkada</strong>
-        <p class="small">“Excellent, prompt and cleaned well too.”</p>
-      </div>
-      <div class="review">
-        <strong>Anshad A K, Trivandrum</strong>
-        <p class="small">“Fresh fish.”</p>
-      </div>
-    </section>
+<section id="youtube">
+<h2>🎥 Watch Our Work</h2>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/0fDElYKssy4" allowfullscreen></iframe>
+</div>
+</section>
+</main>
 
-    <section id="youtube">
-      <h2>🎥 Watch Our Work</h2>
-      <p class="small">See how we source and process our fish daily:</p>
-      <div class="video-wrap" aria-hidden="false">
-        <!-- YouTube embed: video id 0fDElYKssy4 -->
-        <iframe src="https://www.youtube.com/embed/0fDElYKssy4" title="Pachameen video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact & Orders</h2>
-      <p>To join our broadcast list for daily catch and prices, tap the green WhatsApp button below:</p>
-      <div class="contact-row">
-        <a class="button" href="https://wa.me/918921186855?text=Hi%20Pachameen!%20Please%20add%20me%20to%20your%20fresh%20fish%20broadcast%20list." target="_blank" rel="noopener">📱 Message on WhatsApp</a>
-        <a class="button" href="tel:+918921186855" style="background:#014f6b;">📞 Call: +91 89211 86855</a>
-      </div>
-      <p class="small" style="margin-top:12px">We reply quickly to WhatsApp messages — add a short note: your area, preferred delivery time, and what you like.</p>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© Pachameen — From Sea to your Home</p>
-      <p style="margin-top:8px"><a href="https://wa.me/918921186855" style="color:white;text-decoration:underline">Contact us on WhatsApp</a></p>
-      <!-- Follow Us Section -->
+<footer>
 <div class="social-follow">
-  <h3>Follow Us</h3>
-  <p>Stay updated with our latest catches, offers, and news!</p>
+<h3>Follow Us</h3>
+<p>Stay updated with our latest catches, offers, and stories from the sea.</p>
 
-  <div class="social-buttons">
-    <!-- Instagram -->
-    <a href="https://instagram.com/pachameen" target="_blank" rel="noopener noreferrer" class="social-btn white insta">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon insta-icon">
-        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-2.6a1.12 1.12 0 1 0 1.12 1.12A1.12 1.12 0 0 0 18.4 5.6z"/>
-      </svg>
-      <span>Follow on Instagram</span>
-    </a>
+<div class="social-buttons">
+<a href="https://instagram.com/pachameen" class="social-btn insta" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+<path fill="#dd2a7b" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+</svg>
+<span>Instagram</span>
+</a>
 
-    <!-- Facebook -->
-    <a href="https://facebook.com/pachameen" target="_blank" rel="noopener noreferrer" class="social-btn white fb">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon fb-icon">
-        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6V12H18l-.5 3h-3v7A10 10 0 0 0 22 12z"/>
-      </svg>
-      <span>Follow on Facebook</span>
-    </a>
-  </div>
+<a href="https://facebook.com/pachameen" class="social-btn fb" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+<path fill="#1877f2" d="M22 12A10 10 0 1 0 10.5 22v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6V12H18l-.5 3h-3v7A10 10 0 0 0 22 12z"/>
+</svg>
+<span>Facebook</span>
+</a>
+</div>
 </div>
 
-<style>
-.social-follow {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #004aad; /* Your blue background */
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-  color: #fff;
-}
-
-.social-follow h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.social-follow p {
-  color: #e0e0e0;
-  margin-bottom: 25px;
-}
-
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.social-btn.white {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #333;
-  background: #fff;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.social-btn.white:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-/* Instagram color accent */
-.insta-icon {
-  fill: url(#igGradient);
-}
-
-/* Define Instagram gradient icon color */
-.insta-icon path {
-  fill: url(#igGradient);
-}
-
-.fb-icon {
-  fill: #1877f2;
-}
-
-.insta span {
-  color: #dd2a7b;
-}
-
-.fb span {
-  color: #1877f2;
-}
-
-/* Responsive for mobile */
-@media (max-width: 480px) {
-  .social-buttons {
-    flex-direction: column;
-  }
-}
-
-/* SVG gradient definition */
-svg defs {
-  pointer-events: none;
-}
-</style>
-<svg width="0" height="0">
-  <defs>
-    <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f58529"/>
-      <stop offset="50%" stop-color="#dd2a7b"/>
-      <stop offset="100%" stop-color="#8134af"/>
-    </linearGradient>
-  </defs>
-</svg>
-    </div>
-  </footer>
+<p style="margin-top:30px;">© Pachameen — From Sea to Your Home</p>
+<p><a href="https://wa.me/918921186855" style="color:white;text-decoration:underline;">Contact us on WhatsApp</a></p>
+</footer>
 
 </body>
 </html>
