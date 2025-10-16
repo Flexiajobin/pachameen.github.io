@@ -340,16 +340,41 @@ h1 { font-size: 24px; }
 </section>
 </main>
 
-<footer>
-<div class="social-follow">
-<h3>Follow Us</h3>
-<p>Stay updated with our latest catches, offers, and stories from the sea.</p>
+<footer style="background-color:#0b3d91; color:white; padding:40px 20px; text-align:center; border-top:4px solid #0a347a;">
+
+  <div class="social-follow">
+    <h3 style="margin-bottom:10px;">Follow Us</h3>
+    <p>Stay updated with our latest catches, offers, and stories from the sea.</p>
+
+    <div class="social-buttons">
+      <!-- Instagram -->
+      <a href="https://instagram.com/pachameen" class="social-btn insta" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zM17.5 6a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://facebook.com/pachameen" class="social-btn fb" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+          <path d="M22 12A10 10 0 1 0 10.5 22v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6V12H18l-.5 3h-3v7A10 10 0 0 0 22 12z"/>
+        </svg>
+        <span>Facebook</span>
+      </a>
+    </div>
+  </div>
+
+  <p style="margin-top:30px;">© Pachameen — From Sea to Your Home</p>
+  <p><a href="https://wa.me/918921186855" style="color:#fff;text-decoration:underline;">Contact us on WhatsApp</a></p>
+</footer>
 
 <style>
   .social-buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 20px;
   }
 
@@ -358,11 +383,12 @@ h1 { font-size: 24px; }
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    background: #ffffff;
+    background: #fff;
     padding: 8px 14px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
@@ -371,37 +397,19 @@ h1 { font-size: 24px; }
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
+  .social-btn .icon {
+    width: 22px;
+    height: 22px;
+  }
+
   .social-btn.insta {
     color: #E4405F;
   }
 
-  .social-btn .icon {
-    width: 24px;
-    height: 24px;
+  .social-btn.fb {
+    color: #1877F2;
   }
 </style>
-
-<div class="social-buttons">
-  <a href="https://instagram.com/pachameen" class="social-btn insta" target="_blank">
-    <!-- Correct Instagram SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
-      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zM17.5 6a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/>
-    </svg>
-    <span>Instagram</span>
-  </a>
-</div>
-<a href="https://facebook.com/pachameen" class="social-btn fb" target="_blank">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
-<path fill="#1877f2" d="M22 12A10 10 0 1 0 10.5 22v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6V12H18l-.5 3h-3v7A10 10 0 0 0 22 12z"/>
-</svg>
-<span>Facebook</span>
-</a>
-</div>
-</div>
-
-<p style="margin-top:30px;">© Pachameen — From Sea to Your Home</p>
-<p><a href="https://wa.me/918921186855" style="color:white;text-decoration:underline;">Contact us on WhatsApp</a></p>
-</footer>
 
 </body>
 </html>
